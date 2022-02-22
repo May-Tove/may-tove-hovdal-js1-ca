@@ -1,0 +1,143 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: #f7f7f7;
+    font-size: 16px;
+}
+
+h1{
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+
+
+/* Navigation */
+.breadcrumbs{
+    margin-bottom: 30px;
+    padding: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+    border-bottom: 1px solid lightgray;
+}
+
+ul{
+    display: flex;
+    gap: 10px;
+    list-style: none;
+}
+
+/* Links */
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+.active{
+    text-decoration: underline;
+}
+
+/* Home page */
+.container{
+    margin: 0 auto;
+    max-width: 1100px;
+    padding-bottom: 30px;
+}
+
+.results{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.card{
+    background-color: #fff;
+    margin-top: 15px;
+}
+
+.card h2, p{
+    padding: 20px;
+}
+
+.image{
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Contact form */
+form{
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+label{
+    margin-top: 20px;
+    display: block;
+}
+
+input, button, .submit-message{
+    padding: 10px;
+    border-radius: 5px;
+}
+
+input{
+    width: 100%;
+    margin-top: 2px;
+    border: 1px solid lightgray;
+}
+
+button{
+    background: darkblue;
+    color: #fff;
+    text-transform: uppercase;
+    margin-top: 15px;
+    cursor: pointer;
+    border: none;
+    width: 150px;
+    
+}
+
+.submit-message{
+    background: #c9f4be;
+    color: green;
+}
+
+.form-error{
+    display: none;
+    color: red;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.fetchError{
+    background-color: #ffcccb;
+    padding: 20px;
+    color: darkred;
+    width: fit-content;
+    border: 1px solid darkred;
+}
+
+.loader{
+    border: 10px solid lightgray;
+    border-top: 10px solid darkblue;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+    animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
