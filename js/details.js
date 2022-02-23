@@ -1,4 +1,6 @@
 const detailContainer = document.querySelector(".detail-results");
+const pageTitle = document.querySelector("#details-title");
+
 function displayError(message = "Unknown error") {
   return `<div class="fetchError">${message}</div>`;
 }
@@ -19,6 +21,8 @@ async function fetchCharacterDetails() {
     const details = await response.json();
 
     console.log(details);
+
+    pageTitle.innerHTML = `<title>${details.name}</title>`;
 
     createHtml(details);
   } catch (error) {
