@@ -1,29 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title id="details-title">Details</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/details.css" />
+  </head>
+  <body>
     <header class="breadcrumbs">
-        <nav>
-            <ul>
-                <li><a href="index.html">Home / </a></li>
-                <li class="active"><a href="details.html">Details / </a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home /</a></li>
+          <li class="active"><a href="details.html">Details </a></li>
+          <li><a href="contact.html">/ Contact</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
-        <div class="detail-container">
-            <div class="detail-results">
-        <div class="loader"></div>
-            </div>
+      <div class="detail-container">
+        <div class="detail-results">
+          <div class="loader"></div>
         </div>
+      </div>
     </main>
+    <script src="js/components/error.js"></script>
     <script src="js/details.js"></script>
-</body>
+    <footer>
+      <a href="https://rickandmortyapi.com/api/character">
+        API used for this assignment: https://rickandmortyapi.com/api/character
+      </a>
+    </footer>
+  </body>
 </html>

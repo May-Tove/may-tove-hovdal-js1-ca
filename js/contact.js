@@ -45,6 +45,7 @@ function validateForm(event) {
 
 form.addEventListener("submit", validateForm);
 
+// Success message for submitting form
 submitButton.onclick = function () {
   if (
     inputLength(yourName.value, 0) &&
@@ -59,6 +60,7 @@ submitButton.onclick = function () {
   }
 };
 
+// Checking length of characters in input
 function inputLength(value, len) {
   if (value.trim().length > len) {
     return true;
@@ -67,6 +69,7 @@ function inputLength(value, len) {
   }
 }
 
+// Checking for valid email address
 function validateEmail(email) {
   const regEx = /\S+@\S+\.\S+/;
   const patternMatches = regEx.test(email);

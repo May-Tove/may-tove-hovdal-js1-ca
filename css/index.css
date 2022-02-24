@@ -1,0 +1,25 @@
+.container{
+    margin: 0 auto;
+    max-width: 1100px;
+}
+.results{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
+}
+
+.card{
+    background-color: #fff;
+}
+
+.card h2{
+    padding: 20px;
+}
+
+.card p{
+    padding: 0px 0px 20px 20px;
+}
+
+.image{
+    height: 300px;
+}

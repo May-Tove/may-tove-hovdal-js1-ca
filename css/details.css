@@ -1,0 +1,13 @@
+.detail-results{
+    max-width: 500px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.detail-results p{
+padding-top: 20px;
+}
+
+.details-image{
+    height: 500px;
+}

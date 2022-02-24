@@ -1,19 +1,12 @@
 const detailContainer = document.querySelector(".detail-results");
 const pageTitle = document.querySelector("#details-title");
 
-function displayError(message = "Unknown error") {
-  return `<div class="fetchError">${message}</div>`;
-}
 const queryString = document.location.search;
 
 const params = new URLSearchParams(queryString);
 
 const id = params.get("id");
-console.log(id);
-
 const url = "https://rickandmortyapi.com/api/character/" + id;
-
-console.log(url);
 
 async function fetchCharacterDetails() {
   try {
@@ -22,7 +15,7 @@ async function fetchCharacterDetails() {
 
     console.log(details);
 
-    pageTitle.innerHTML = `<title>${details.name}</title>`;
+    pageTitle.innerHTML = `${details.name}`;
 
     createHtml(details);
   } catch (error) {
@@ -31,11 +24,17 @@ async function fetchCharacterDetails() {
   }
 }
 
+fetchCharacterDetails();
+
 function createHtml(details) {
-  detailContainer.innerHTML = `<div class="image" style="background-image: url(${details.image});"></div>
-                                <h1>${details.name}</h1>
-                                <p>${details.species}</p>
-                                <p>Gender: ${details.gender}</p>
-                                <p>Status: ${details.status}</p>
-                                <p>Origin: ${details.origin}</p>`;
+  const gender = details.gender.toLowerCase();
+  const species = details.species.toLowerCase();
+  const origin = details.origin.name.toLowerCase();
+
+  detailContainer.innerHTML = `<h1>${details.name}</h1>
+                                <div class="details-image" style="background-image: url(${details.image});"></div>
+                                <p>Species:  ${species}</p>
+                                <p>Gender: ${gender}</p>
+                                <p>Origin: ${origin}</p>
+                                <p>Status: ${details.status}</p>`;
 }

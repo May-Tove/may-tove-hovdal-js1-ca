@@ -2,10 +2,6 @@ const url = "https://rickandmortyapi.com/api/character";
 
 const resultsContainer = document.querySelector(".results");
 
-function displayError(message = "Unknown error") {
-  return `<div class="fetchError">${message}</div>`;
-}
-
 async function fetchCharacters() {
   try {
     const response = await fetch(url);
