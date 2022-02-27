@@ -9,7 +9,7 @@ async function fetchCharacters() {
 
     console.log(result);
 
-    createHtml(result);
+    displayHtml(result);
   } catch (error) {
     console.log(error);
     resultsContainer.innerHTML = displayError("An error occurred");
@@ -18,7 +18,7 @@ async function fetchCharacters() {
 
 fetchCharacters();
 
-function createHtml(result) {
+function displayHtml(result) {
   const characters = result.results;
 
   resultsContainer.innerHTML = "";
@@ -30,7 +30,7 @@ function createHtml(result) {
 
     const img = characters[i].image;
     const character = characters[i].name;
-    const status = characters[i].status;
+    const status = characters[i].status.toLowerCase();
 
     resultsContainer.innerHTML += `<a href="details.html?id=${characters[i].id}" class="card">
                                     <div class="image" style="background-image: url(${img});"></div>

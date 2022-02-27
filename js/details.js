@@ -17,7 +17,7 @@ async function fetchCharacterDetails() {
 
     pageTitle.innerHTML = `${details.name}`;
 
-    createHtml(details);
+    displayHtml(details);
   } catch (error) {
     console.log(error);
     detailContainer.innerHTML = displayError("An error occurred");
@@ -26,15 +26,16 @@ async function fetchCharacterDetails() {
 
 fetchCharacterDetails();
 
-function createHtml(details) {
+function displayHtml(details) {
   const gender = details.gender.toLowerCase();
   const species = details.species.toLowerCase();
   const origin = details.origin.name.toLowerCase();
+  const status = details.status.toLowerCase();
 
   detailContainer.innerHTML = `<h1>${details.name}</h1>
                                 <div class="details-image" style="background-image: url(${details.image});"></div>
                                 <p>Species:  ${species}</p>
                                 <p>Gender: ${gender}</p>
                                 <p>Origin: ${origin}</p>
-                                <p>Status: ${details.status}</p>`;
+                                <p>Status: ${status}</p>`;
 }
