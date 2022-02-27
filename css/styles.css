@@ -1,92 +1,94 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background: #f7f7f7;
-    font-size: 16px;
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: #f7f7f7;
+  font-size: 16px;
 }
 
-main{
-    min-height: 80vh;
+main {
+  min-height: 80vh;
 }
 
-h1{ 
-    padding-bottom: 20px;
+h1 {
+  padding-bottom: 20px;
 }
 
-header, footer{
-    margin: 0 auto;
-    max-width: 1100px;
-    padding: 30px;
+header,
+footer {
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 30px;
 }
 
-.breadcrumbs{
-    border-bottom: 1px solid lightgray;
-    margin-bottom: 40px;
+.breadcrumbs {
+  border-bottom: 1px solid lightgray;
+  margin-bottom: 40px;
 }
 
-ul{
-    display: flex;
-    gap: 10px;
-    list-style: none;
+ul {
+  display: flex;
+  gap: 10px;
+  list-style: none;
 }
 
-footer{
-    border-top: 1px solid lightgray;
-    text-align: center;
-    margin-top: 40px;
+footer {
+  border-top: 1px solid lightgray;
+  text-align: center;
+  margin-top: 40px;
 }
 
 /* Links */
-a{
-    text-decoration: none;
-    color: #000;
+a {
+  text-decoration: none;
+  color: #000;
 }
 
-.active{
-    text-decoration: underline;
+.active {
+  text-decoration: underline;
 }
 
 /* Images */
-.image, .details-image{
-    background-size: cover;
-    background-position: center;
+.image,
+.details-image {
+  background-size: cover;
+  background-position: center;
 }
 
 /* Error messages */
-.form-error{
-    display: none;
-    color: red;
-    font-size: 14px;
-    margin-bottom: 20px;
+.form-error {
+  display: none;
+  color: red;
+  font-size: 14px;
+  margin-bottom: 20px;
 }
 
-.fetchError{
-    background-color: #ffcccb;
-    padding: 20px;
-    color: darkred;
-    width: fit-content;
-    border: 1px solid darkred;
+.fetchError {
+  background-color: #ffcccb;
+  padding: 20px;
+  color: darkred;
+  width: fit-content;
+  border: 1px solid darkred;
 }
 
 /* Loader */
-.loader{
-    border: 10px solid lightgray;
-    border-top: 10px solid darkblue;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    margin: 0 auto;
-    margin-top: 30px;
-    animation: spin 1.5s infinite ease-in-out;
+.loader {
+  border: 10px solid lightgray;
+  border-top: 10px solid darkblue;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  margin-top: 30px;
+  animation: spin 1.5s infinite ease-in-out;
 }
 
-@keyframes spin{
-    100%{
-        transform: rotate(360deg);
-    }
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
 }
